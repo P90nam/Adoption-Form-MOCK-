@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- Deklarasi HTML5 memberi tahu browser cara membaca dokumen ini. -->
+<html lang="id">
+<head>
+  <!-- Mengatur karakter agar teks Indonesia dan emoji tampil dengan benar. -->
+  <meta charset="UTF-8" />
+  <!-- Membuat tampilan mengikuti lebar perangkat dan mendukung responsivitas. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Judul yang ditampilkan pada tab browser. -->
+  <title>PawHome — Adoption Center</title>
+  <!-- Mempercepat koneksi ke penyedia font Google. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- Memuat font Fraunces untuk judul dan DM Sans untuk teks aplikasi. -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;0,800;1,300;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Menghubungkan dokumen dengan seluruh aturan tampilan CSS. -->
+  <link rel="stylesheet" href="src/css/styles.css" />
+</head>
+<body>
+
+<!-- Tempat renderNavbar() menampilkan navigasi aplikasi. -->
+<div id="navbar-root"></div>
+<!-- Tempat router memasukkan konten halaman aktif berdasarkan state.page. -->
+<div id="app"></div>
+
+<!-- Semua script dimuat berurutan agar data dan fungsi tersedia sebelum halaman dirender. -->
+<!-- Memuat penyimpanan data dan state aplikasi. -->
+<script src="src/js/data/state.js"></script>
+<!-- Memuat fungsi modal dan notifikasi. -->
+<script src="src/js/utils/utils.js"></script>
+<!-- Memuat komponen navbar, kartu hewan, dan formulir adopsi. -->
+<script src="src/js/components/components.js"></script>
+<!-- Memuat footer yang dipakai bersama oleh beberapa halaman. -->
+<script src="src/js/pages/footer.js"></script>
+<!-- Memuat masing-masing fungsi pembentuk markup halaman. -->
+<script src="src/js/pages/home.js"></script>
+<script src="src/js/pages/adopt.js"></script>
+<script src="src/js/pages/login.js"></script>
+<script src="src/js/pages/register.js"></script>
+<script src="src/js/pages/adoption.js"></script>
+<script src="src/js/pages/success.js"></script>
+<script src="src/js/pages/reviews.js"></script>
+<script src="src/js/pages/about.js"></script>
+<!-- Memuat aksi pengguna dan handler formulir. -->
+<script src="src/js/handlers/handlers.js"></script>
+<!-- Memuat logika pemilihan halaman. -->
+<script src="src/js/router/router.js"></script>
+<!-- Memulai aplikasi setelah seluruh dependency tersedia. -->
+<script src="src/js/app/app.js"></script>
+</body>
+</html>
